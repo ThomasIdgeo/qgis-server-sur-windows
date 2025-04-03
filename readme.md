@@ -2,12 +2,17 @@
 
 Aujourd'hui on publie des données avec QGIS Server. :earth_africa: 	
 
-![]() + ![](https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/debian-original-wordmark.png) + ![](https://www.3liz.com/en/images/logo-qgis-server.png)
+<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/linux-original.png?raw=true" width="100px" height="100px">
++
+<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/debian-original-wordmark.png?raw=true" width="100px" height="100px">
++
+<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/logo-qgis-server.png?raw=true" width="100px" height="100px">
 
 
-les logos WSL + Debian + QGIS Server depuis github 
 
-Documentation fortement adaptée de la documentation officielle de QGIS.org
+<!--logos WSL + Debian + QGIS Server depuis github-->
+
+Documentation fortement inspirée de la documentation officielle de QGIS.org
 
 https://docs.qgis.org/3.40/fr/docs/server_manual/getting_started.html#installation-on-debian-based-systems
 
@@ -27,7 +32,7 @@ Avoir activer WSL et installer un terminal Debian ou Ubuntu (cf votre version wi
 
 ### Côté WSL depuis un terminal Debian ou Ubuntu
 
-*Adapter les noms si voulu, ou changer "thomas" sauf si vous voulez porter ce prénom magnifique l'instant de cette démo*
+*Adapter les noms si souhaité, ou changer "thomas" sauf si vous voulez porter ce prénom magnifique l'instant de cette démo*
 
 - Actualisation du gestionnaire de paquets
 
