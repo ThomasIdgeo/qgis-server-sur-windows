@@ -40,7 +40,7 @@ sudo apt update
 
 - Installation pré-requis
 
-  ``sudo apt install gnupg software-properties-common``
+  ``sudo apt install gnupg software-properties-common wget``
 
 - Ajout de la clé gpg 
 
@@ -61,12 +61,12 @@ sudo apt update
 > On copie/colle le contenu dans le fichier
   
 ```
-	Types: deb deb-src 
-	URIs: https://qgis.org/debian-ltr
-	Suites: bookworm #debian
-	Architectures: amd64
-	Components: main
-	Signed-By: /etc/apt/keyrings/qgis-archive-keyring.gpg
+Types: deb deb-src 
+URIs: https://qgis.org/debian-ltr
+Suites: bookworm
+Architectures: amd64
+Components: main
+Signed-By: /etc/apt/keyrings/qgis-archive-keyring.gpg
 ```
 
 
@@ -101,28 +101,28 @@ Server:  QGIS FCGI server - QGIS version 3.40.5-Bratislava
 Status:  302
 ``` 
 
-- Suite de la doc avec la création des dossiers
+- Suite de la doc avec la création des dossiers (on se positionne sur la partition windows 
+afin de pouvoir travailler avec QGIS desktop installé sur windows)
 
-  ``cd /home/``
+  ``sudo mkdir /mnt/c/qgis-server/``
 
-  ``sudo mkdir qgis/``
-
-  ``sudo mkdir qgis/projets``
+  ``sudo mkdir /mnt/c/qgis-server/projets``
   
-  ``cd qgis/projets``
+  ``cd /mnt/c/qgis-server/projets``
   
-  ``sudo chown www-data:www-data -R /home/qgis/*``
+  ``sudo chown www-data:www-data -R /mnt/c/qgis-server/*``
   
-  ``sudo chmod a+w -R /home/qgis/*``
+  ``sudo chmod a+w -R /mnt/c/qgis-server/*``
   
 - Récupération des données pour la démo (prout) 
   
   ``wget https://github.com/qgis/QGIS-Training-Data/archive/release_3.40.zip``
+  
   ``unzip release_3.40.zip``
   
-  ``mv QGIS-Training-Data-release_3.40/exercise_data/qgis-server-tutorial-data/world.qgs .``
+  ``mv QGIS-Training-Data-release_3.40/exercise_data/qgis-server-tutorial-data/world.qgs ./projets``
   
-  ``mv QGIS-Training-Data-release_3.40/exercise_data/qgis-server-tutorial-data/naturalearth.sqlite .``
+  ``mv QGIS-Training-Data-release_3.40/exercise_data/qgis-server-tutorial-data/naturalearth.sqlite ./projets``
   
   ``rm -R release_3.40.zip``
    
@@ -130,11 +130,8 @@ Status:  302
 
   ``sudo apt install apache2 libapache2-mod-fcgid``
 
-- Configuration du serveur pour qu'il point vers qgis Server
-
-  ``sudo touch /etc/apache2/sites-available/thomas.demo.conf``
   
-- On édite avec nano et on colle le contenu dans le dossier
+- On crée le fichier et on édite avec nano et on colle le contenu ci-dessous dans le fichier
 
   ``sudo nano /etc/apache2/sites-available/thomas.demo.conf``
 
@@ -161,15 +158,15 @@ Status:  302
   FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
 
   # default QGIS project
-  SetEnv QGIS_PROJECT_FILE /home/qgis/projets/world.qgs
+  SetEnv QGIS_PROJECT_FILE /mnt/c/qgis-server/projets/world.qgs
 
   # QGIS_AUTH_DB_DIR_PATH must lead to a directory writeable by the Server's FCGI process user
-  FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/home/qgis/qgisserverdb/"
-  FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/home/qgis/qgisserverdb/qgis-auth.db"
+  FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/mnt/c/qgis-server/qgisserverdb/"
+  FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/mnt/c/qgis-server/qgisserverdb/qgis-auth.db"
 
   # Set pg access via pg_service file
-  SetEnv PGSERVICEFILE /home/qgis/.pg_service.conf
-  FcgidInitialEnv PGPASSFILE "/home/qgis/.pgpass"
+  SetEnv PGSERVICEFILE /mnt/c/qgis-server/.pg_service.conf
+  FcgidInitialEnv PGPASSFILE "/mnt/c/qgis-server/.pgpass"
 
   # if qgis-server is installed from packages in debian based distros this is usually /usr/lib/cgi-bin/
   # run "locate qgis_mapserv.fcgi" if you don't know where qgis_mapserv.fcgi is
@@ -189,18 +186,14 @@ Status:  302
 ````
 
 - Création des répertoires qui stockeront les logs du serveur QGIS et ceux de la base de données d’authentification :
-
-  ``mkdir -p /var/log/qgis/`` 
   
   ``sudo mkdir -p /var/log/qgis/``
-
-  ``chown www-data:www-data /var/log/qgis``
 
   ``sudo chown www-data:www-data /var/log/qgis``
   
   ``sudo mkdir -p /home/qgis/qgisserverdb``
   
-- Accord des droits à l'utilisateur Aapche www-data
+- Accord des droits à l'utilisateur Apache www-data
   
   ``sudo chown www-data:www-data /home/qgis/qgisserverdb``
   
@@ -272,3 +265,12 @@ Le webservices lui fonctionne parfaitement (ajouter le GetCapabilities au servic
 
 :beers:
 
+> A compléter la fonction de catalogue
+
+Activer les QGIS LANDING PAGE, cf =>
+
+https://github.com/elpaso/qgis-server-landing-page-plugin
+
+https://github.com/elpaso/qgis-server-landing-page-plugin#configuration
+
+https://github.com/qgis/QGIS-Documentation/issues/6009
