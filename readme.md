@@ -62,8 +62,8 @@ sudo apt update
   
 ```
 Types: deb deb-src 
-URIs: https://qgis.org/debian-ltr
-Suites: bookworm
+URIs: https://qgis.org/debian-ltr #https://qgis.org/ubuntu-ltr
+Suites: version-a-modifier
 Architectures: amd64
 Components: main
 Signed-By: /etc/apt/keyrings/qgis-archive-keyring.gpg
@@ -104,12 +104,11 @@ Status:  302
 - Suite de la doc avec la création des dossiers (on se positionne sur la partition windows 
 afin de pouvoir travailler avec QGIS desktop installé sur windows)
 
+On crée un répertoire sur la participation windows histoire de ne pas avoir de problèmes inutiles entre windo et wsl : 
   ``sudo mkdir /mnt/c/qgis-server/``
 
   ``sudo mkdir /mnt/c/qgis-server/projets``
-  
-  ``cd /mnt/c/qgis-server/projets``
-  
+    
   ``sudo chown www-data:www-data -R /mnt/c/qgis-server/*``
   
   ``sudo chmod a+w -R /mnt/c/qgis-server/*``
@@ -265,7 +264,28 @@ Le webservices lui fonctionne parfaitement (ajouter le GetCapabilities au servic
 
 :beers:
 
-> A compléter la fonction de catalogue
+> [!NOTE] 
+> **Construction d'une Requête Web Service** :
+> 
+> **http://qgis.demo/cgi-bin/qgis_mapserv.fcgi?** => l'exécutable sur le serveur
+> 
+> **map=/mnt/c/qgis-server/projets/world.qgs&** => le chemin complet du projet
+> 
+> **SERVICE=WFS&** => type de service
+> 
+> **VERSION=2.0.0&**=> version ici pour le wfs
+> 
+> **REQUEST=GetCapabilitie** => Requête GetCap ou GetMap ou GetLegend ...
+
+### Ajouter d'autre projet
+
+Pour observer la diffusion d'autre projet QGIS, il faut enregistrer le projet à l'emplacement prévu initialement.
+
+L'URL d'accés est indiquée avec le chemin complet vers le qgs.
+ 
+http://qgis.demo/cgi-bin/qgis_mapserv.fcgi?map=/mnt/c/qgis-server/projets/world.qgs&ERVICE=WFS&ERSION=2.0.0&REQUEST=GetCapabilitie
+
+### A compléter la fonction de catalogue
 
 Activer les QGIS LANDING PAGE, cf =>
 
