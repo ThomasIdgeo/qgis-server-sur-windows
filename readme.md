@@ -2,11 +2,11 @@
 
 Aujourd'hui on publie des données avec QGIS Server. :earth_africa: 	
 
-<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/linux-original.png?raw=true" width="100px" height="100px">
+<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/linux-original.png?raw=true" width="100px" height="60px">
 +
-<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/debian-original-wordmark.png?raw=true" width="100px" height="100px">
+<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/debian-original-wordmark.png?raw=true" width="60px" height="100px">
 +
-<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/logo-qgis-server.png?raw=true" width="100px" height="100px">
+<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/logo-qgis-server.png?raw=true" width="100px" height="60px">
 
 
 
@@ -36,7 +36,7 @@ Avoir activer WSL et installer un terminal Debian ou Ubuntu (cf votre version wi
 
 - Actualisation du gestionnaire de paquets
 
-sudo apt update
+```sudo apt update```
 
 - Installation pré-requis
 
@@ -283,7 +283,7 @@ Pour observer la diffusion d'autre projet QGIS, il faut enregistrer le projet à
 
 L'URL d'accés est indiquée avec le chemin complet vers le qgs.
  
-http://qgis.demo/cgi-bin/qgis_mapserv.fcgi?map=/mnt/c/qgis-server/projets/world.qgs&ERVICE=WFS&ERSION=2.0.0&REQUEST=GetCapabilitie
+http://qgis.demo/cgi-bin/qgis_mapserv.fcgi?map=/mnt/c/qgis-server/projets/world.qgs&SERVICE=WFS&ERSION=2.0.0&REQUEST=GetCapabilities
 
 ### A compléter la fonction de catalogue
 
