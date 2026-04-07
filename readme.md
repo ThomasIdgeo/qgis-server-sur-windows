@@ -2,11 +2,11 @@
 
 Aujourd'hui on publie des données avec QGIS Server. :earth_africa: 	
 
-<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/linux-original.png?raw=true" width="100px" height="60px">
+<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/linux-original.png?raw=true" width="60px" height="60px">
 +
-<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/debian-original-wordmark.png?raw=true" width="60px" height="100px">
+<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/debian-original-wordmark.png?raw=true" width="60px" height=60px">
 +
-<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/logo-qgis-server.png?raw=true" width="100px" height="60px">
+<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/logo-qgis-server.png?raw=true" width="60px" height="60px">
 
 
 
