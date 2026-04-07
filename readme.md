@@ -14,7 +14,7 @@ Aujourd'hui on publie des données avec QGIS Server. :earth_africa:
 
 Documentation fortement inspirée de la documentation officielle de QGIS.org
 
-[https://docs.qgis.org/3.40/fr/docs/server_manual/getting_started.html#installation-on-debian-based-systems(https://docs.qgis.org/3.40/fr/docs/server_manual/getting_started.html#installation-on-debian-based-systems)]
+[https://docs.qgis.org/3.40/fr/docs/server_manual/getting_started.html#installation-on-debian-based-systems](https://docs.qgis.org/3.40/fr/docs/server_manual/getting_started.html#installation-on-debian-based-systems)
 
 ## Pré-requis
 
@@ -25,7 +25,7 @@ Avoir activer WSL et installer un terminal Debian ou Ubuntu (cf votre version wi
 - Pour la préparation d'un cours sur QGIS server
 - Pour la curiosité tout court
 - Pour se passer de la version OSGEO4W et de la méthode 
-(https://docs.qgis.org/3.40/fr/docs/server_manual/getting_started.html#installation-on-windows)
+[https://docs.qgis.org/3.44/fr/docs/server_manual/getting_started.html#installation-on-windows](https://docs.qgis.org/3.44/fr/docs/server_manual/getting_started.html#installation-on-windows)
 
 
 ## Procédure
@@ -115,15 +115,17 @@ On crée un répertoire sur la participation windows histoire de ne pas avoir de
   
 - Récupération des données pour la démo (prout) 
   
-  ``wget https://github.com/qgis/QGIS-Training-Data/archive/release_3.40.zip``
+  ``wget https://github.com/qgis/QGIS-Training-Data/archive/release_3.44.zip``
   
-  ``unzip release_3.40.zip``
+  ``unzip release_3.44.zip``
+
+  ``mv QGIS-Training-Data-release_3.44/ /mnt/c/qgis-server``
   
-  ``mv QGIS-Training-Data-release_3.40/exercise_data/qgis-server-tutorial-data/world.qgs ./projets``
+  ``mv QGIS-Training-Data-release_3.44/exercise_data/qgis-server-tutorial-data/world.qgs ./projets``
   
-  ``mv QGIS-Training-Data-release_3.40/exercise_data/qgis-server-tutorial-data/naturalearth.sqlite ./projets``
+  ``mv QGIS-Training-Data-release_3.44/exercise_data/qgis-server-tutorial-data/naturalearth.sqlite ./projets``
   
-  ``rm -R release_3.40.zip``
+  ``rm -R release_3.44.zip``
    
 - Installation du web serveur Apache
 
