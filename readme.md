@@ -4,7 +4,7 @@ Aujourd'hui on publie des données avec QGIS Server. :earth_africa:
 
 <img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/linux-original.png?raw=true" width="60px" height="60px">
 +
-<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/debian-original-wordmark.png?raw=true" width="60px" height=60px">
+<img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/debian-original-wordmark.png?raw=true" width="60px" height="60px">
 +
 <img src="https://github.com/ThomasIdgeo/svg_ressources_idgeo/blob/main/icons_png/logo-qgis-server.png?raw=true" width="60px" height="60px">
 
@@ -14,7 +14,7 @@ Aujourd'hui on publie des données avec QGIS Server. :earth_africa:
 
 Documentation fortement inspirée de la documentation officielle de QGIS.org
 
-https://docs.qgis.org/3.40/fr/docs/server_manual/getting_started.html#installation-on-debian-based-systems
+[https://docs.qgis.org/3.40/fr/docs/server_manual/getting_started.html#installation-on-debian-based-systems(https://docs.qgis.org/3.40/fr/docs/server_manual/getting_started.html#installation-on-debian-based-systems)]
 
 ## Pré-requis
 
