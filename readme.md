@@ -279,6 +279,28 @@ Le webservices lui fonctionne parfaitement (ajouter le GetCapabilities au servic
 > 
 > **REQUEST=GetCapabilitie** => Requête GetCap ou GetMap ou GetLegend ...
 
+### Comment créer des WebServices 
+
+Ou comment rendre nos données diffusables par QGIS Server ?
+
+#### 1. La clé : un projet QGIS au format qgs
+
+> [!IMPORTANT] 
+> Le projet QGIS doit être enregistré en texte clair au format **.qgs**
+> Il est conseillé d'enregistrer ces projets au format qgs par défaut.
+
+![](img/projet_qgs.png)
+
+#### 2. Titre court et Titre sur chaque couche
+
+Titre court (nom machine) et titre (lisible par un humain) de la couche sont obligatoire. Les autre items peuvent être complémentaires.
+
+#### 3. Définition des capacités du projet
+
+Paramétrer l'onglet "QGIS Server" des propriété du projet.
+
+![](img/projet_qgs_proporiete.png)
+
 ### Ajouter d'autre projet
 
 Pour observer la diffusion d'autre projet QGIS, il faut enregistrer le projet à l'emplacement prévu initialement.
